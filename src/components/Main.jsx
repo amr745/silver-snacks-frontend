@@ -1,8 +1,13 @@
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
+import CONFIG from "../config/index";
+import SignupPage from "../pages/SignupPage"
+import LoginPage from "../pages/LoginPage";
+import ProtectedRoute from "../components/Protected-Route"
+import { getToken } from '../services/tokenService';
 
+const Main = (props) => {
 
-const Main = () => {
   const [products, setProducts] = useState(null);
   const url = "https://silver-snacks-emporium.herokuapp.com/products/";
 
@@ -13,18 +18,17 @@ const Main = () => {
     console.log(data)
   };
 
-  useEffect(() => {getProducts()}, []);
-
-  const loaded = () => {
+  // useEffect(() => { getProducts }, []);
   return (
-    <div>{products.map((product) => (
-      <h1>{product.name}</h1>
-    ))}
+    <div className="Main">
+      <Routes>
+        <Route path="/signup" element={<SignupPage {...props} />} />
+        <Route path="/login" element={<LoginPage {...props} />} />
+      </Routes>
     </div>
-  )
+    )
   }
-  return products ? loaded() : <h1>Loading...</h1>
-}
+  
 
 
 export default Main
