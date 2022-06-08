@@ -99,41 +99,7 @@ function SignupForm({ updateMessage, handleSignupOrLogin }) {
                     Already registered <a href="/login">Sign in?</a>
                 </p>
             </form>
-            {/* <form onSubmit={handleSubmit}>
-                <legend>Sign Up</legend>
-                <input
-                    type="text"
-                    placeholder="Name"
-                    value={formState.name}
-                    name="name"
-                    onChange={handleChange}
-                />
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={formState.email}
-                    name="email"
-                    onChange={handleChange}
-                />
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={formState.password}
-                    name="password"
-                    onChange={handleChange}
-                />
-                <input
-                    type="password"
-                    placeholder="Confirm Password"
-                    value={formState.passwordConf}
-                    name="passwordConf"
-                    onChange={handleChange}
-                />
-                <div className="form-controls">
-                    <button disabled={!validForm()}>Sign Up</button>
-                    <Link to="/">Cancel</Link>
-                </div>
-            </form> */}
+
         </div>
     );
 }
