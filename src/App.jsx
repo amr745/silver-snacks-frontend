@@ -3,7 +3,7 @@ import Main from "./components/Main";
 import { useState, useEffect } from "react";
 import { getUser, logout } from "./services/signup";
 import Footer from "./components/Footer";
-
+import Cart from "./pages/Cart";
 function App() {
   const [userState, setUserState] = useState({ user: getUser() });
 
@@ -39,6 +39,7 @@ function App() {
         user={userState.user} handleSignupOrLogin={handleSignupOrLogin}
         handleClick={handleClick}
       />
+      <Cart cartItem={cartItem} />
       <Footer />
     </div>
   );
