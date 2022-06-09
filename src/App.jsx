@@ -38,6 +38,7 @@ function App() {
       <Main 
         user={userState.user} handleSignupOrLogin={handleSignupOrLogin}
         handleClick={handleClick}
+        cartItem={cartItem}
       />
       <Footer />
     </div>

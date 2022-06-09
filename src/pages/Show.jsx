@@ -17,4 +17,5 @@ const Show = ({ products, handleClick }) => {
     </div>
   )
 }
+
 export default Show

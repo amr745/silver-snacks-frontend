@@ -10,9 +10,9 @@ const loaded = () => {
      <div className="product-data" key={product._id}>
        <h1>{product.name}</h1>
        <Link to={`/products/${product._id}`}>
-         <img src={product.img} alt={product.name} />
+         <img id="product-data" src={product.img} alt={product.name} />
        </Link>
-        <h2>{product.price}</h2>
+        <h2>${product.price}</h2>
      </div>
    ))}
     </div>
