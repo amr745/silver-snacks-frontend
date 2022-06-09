@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { AiOutlineShopping } from "react-icons/fa"
 
 const Cart = () => {
     const removeProduct = () => {
