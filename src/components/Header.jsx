@@ -7,41 +7,25 @@ function Header({ user, handleLogout }) {
 
     (<Navbar bg="primary" variant="dark">
       <Container>
-        <Navbar.Brand href="/">Logo</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">Logo</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/signup">Sign Up</Nav.Link>
-          <Nav.Link href="/login">Login</Nav.Link>
+        <Nav.Link as={Link} to="/">Home</Nav.Link>
+          <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>
+          <Nav.Link as={Link} to="/login">Login</Nav.Link>
         </Nav>
       </Container>
     </Navbar>) :
     (<Navbar bg="primary" variant="dark">
       <Container>
-        <Navbar.Brand href="/">Logo</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">Logo</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="#" onClick={handleLogout}
+        <Nav.Link as={Link} to="/">Home</Nav.Link>
+          <Nav.Link as={Link} to="#" onClick={handleLogout}
           >Logout</Nav.Link>
           <h5>Welcome {user.name}</h5>
         </Nav>
       </Container>
     </Navbar>)
-
-  // (
-  //   <nav className="nav">
-  //     <Link to="/">Home</Link>
-  //     <Link to="/signup">Sign Up</Link>
-  //     <Link to="/login">Log In</Link>
-  //   </nav>
-  // ) : (
-  //   <nav className="nav">
-  //     <h1>Welcome {user.name},</h1>
-  //     <Link to="/">Home</Link>
-  //     <Link to="" onClick={handleLogout}>
-  //       Log Out
-  //     </Link>
-  //   </nav>
-  // );
 }
 
 export default Header;

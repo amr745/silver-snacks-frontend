@@ -18,13 +18,14 @@ function App() {
   const [cartItem, setCartItem] = useState([])
 
   const handleClick = (product) => {
-    const temp = cartItem
-    temp.push(product)
-    setCartItem([...cartItem, product])
+    setCartItem((prevState) => [
+      ...prevState, 
+      product
+    ])
   }
   
   useEffect(() => {
-    console.log(cartItem)
+    console.log("UseEffect", cartItem)
   }, [cartItem])
 
   return (
