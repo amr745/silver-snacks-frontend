@@ -1,0 +1,16 @@
+.show {
+  display: flex;
+  flex-grow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#product-image {
+  width: 15rem;
+}
+
+#logo-image {
+  width: 10rem;
+  border-radius: 10px;
+}
+

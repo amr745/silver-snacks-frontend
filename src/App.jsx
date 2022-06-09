@@ -2,7 +2,8 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import { useState, useEffect } from "react";
 import { getUser, logout } from "./services/signup";
-
+import Footer from "./components/Footer";
+import Cart from "./pages/Cart";
 function App() {
   const [userState, setUserState] = useState({ user: getUser() });
 
@@ -18,13 +19,14 @@ function App() {
   const [cartItem, setCartItem] = useState([])
 
   const handleClick = (product) => {
-    const temp = cartItem
-    temp.push(product)
-    setCartItem([...cartItem, product])
+    setCartItem((prevState) => [
+      ...prevState, 
+      product
+    ])
   }
   
   useEffect(() => {
-    console.log(cartItem)
+    console.log("UseEffect", cartItem)
   }, [cartItem])
 
   return (
@@ -37,6 +39,7 @@ function App() {
         user={userState.user} handleSignupOrLogin={handleSignupOrLogin}
         handleClick={handleClick}
       />
+      <Footer />
     </div>
   );
 }
