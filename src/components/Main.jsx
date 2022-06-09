@@ -8,6 +8,7 @@ import { getToken } from '../services/tokenService';
 import Home from "../pages/Home";
 
 const Main = (props) => {
+
   const [products, setProducts] = useState(null);
   const url = "https://silver-snacks-emporium.herokuapp.com/products/";
 
@@ -25,8 +26,9 @@ const Main = (props) => {
       <Routes>
         <Route path="/signup" element={<SignupPage {...props} />} />
         <Route path="/login" element={<LoginPage {...props} />} />
+        <Route path="/" element={<Home products={products}/>}></Route>
       </Routes>
-      <Home products={products}/>
+      
     </div>
     )
   }

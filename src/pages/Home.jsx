@@ -12,7 +12,7 @@ const loaded = () => {
        <Link to={`/products/${product._id}`}>
          <img src={product.img} alt={product.name} />
        </Link>
-        <h5>{product.price}</h5>
+        <h2>{product.price}</h2>
      </div>
    ))}
     </div>
