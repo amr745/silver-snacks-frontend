@@ -5,9 +5,9 @@ import SignupPage from "../pages/SignupPage"
 import LoginPage from "../pages/LoginPage";
 import ProtectedRoute from "../components/Protected-Route"
 import { getToken } from '../services/tokenService';
+import Home from "../pages/Home";
 
 const Main = (props) => {
-
   const [products, setProducts] = useState(null);
   const url = "https://silver-snacks-emporium.herokuapp.com/products/";
 
@@ -18,14 +18,15 @@ const Main = (props) => {
     console.log(data)
   };
 
-  useEffect(() => { getProducts }, []);
-  
+  useEffect(() => { getProducts() }, []);
+
   return (
     <div className="Main">
       <Routes>
         <Route path="/signup" element={<SignupPage {...props} />} />
         <Route path="/login" element={<LoginPage {...props} />} />
       </Routes>
+      <Home products={products}/>
     </div>
     )
   }

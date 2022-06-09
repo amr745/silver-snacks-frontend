@@ -17,8 +17,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header user={userState.user} handleLogout={handleLogout} />
-      <Main user={userState.user} handleSignupOrLogin={handleSignupOrLogin} />
+      <Header 
+        user={userState.user} 
+        handleLogout={handleLogout} 
+      />
+      <Main 
+        user={userState.user} handleSignupOrLogin={handleSignupOrLogin} 
+      />
     </div>
   );
 }
