@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import { FaSignInAlt } from "react-icons/fa";
-import {FaUser} from "react-icons/fa";
-import {FaHome} from "react-icons/fa"
+import { FaUser } from "react-icons/fa";
+import { FaHome } from "react-icons/fa"
 
 function Header({ user, handleLogout }) {
   return !user ?

@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import { useState, useEffect } from "react";
 import { getUser, logout } from "./services/signup";
+import Footer from "./components/Footer";
 
 function App() {
   const [userState, setUserState] = useState({ user: getUser() });
@@ -38,6 +39,7 @@ function App() {
         user={userState.user} handleSignupOrLogin={handleSignupOrLogin}
         handleClick={handleClick}
       />
+      <Footer />
     </div>
   );
 }
