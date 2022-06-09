@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../services/signup";
+import { FaSignInAlt } from "react-icons/fa";
 
 function LoginPage({ handleSignupOrLogin, updateMessage }) {
     const [formState, setFormState] = useState({
@@ -33,7 +34,7 @@ function LoginPage({ handleSignupOrLogin, updateMessage }) {
     return (
         <div className="auth-form">
             <form onSubmit={handleSubmit}>
-                <h3>Login</h3>
+                <h3><FaSignInAlt />Login</h3>
                 <div className="mb-3">
                     <label>Email address</label>
                     <input
