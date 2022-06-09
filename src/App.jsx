@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Main from "./components/Main";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { getUser, logout } from "./services/signup";
 
 function App() {
@@ -15,6 +15,18 @@ function App() {
     setUserState({ user: null });
   }
 
+  const [cartItem, setCartItem] = useState([])
+
+  const handleClick = (product) => {
+    const temp = cartItem
+    temp.push(product)
+    setCartItem([...cartItem, product])
+  }
+  
+  useEffect(() => {
+    console.log(cartItem)
+  }, [cartItem])
+
   return (
     <div className="App">
       <Header 
@@ -22,7 +34,8 @@ function App() {
         handleLogout={handleLogout} 
       />
       <Main 
-        user={userState.user} handleSignupOrLogin={handleSignupOrLogin} 
+        user={userState.user} handleSignupOrLogin={handleSignupOrLogin}
+        handleClick={handleClick}
       />
     </div>
   );

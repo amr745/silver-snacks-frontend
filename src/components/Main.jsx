@@ -28,7 +28,7 @@ const Main = (props) => {
         <Route path="/signup" element={<SignupPage {...props} />} />
         <Route path="/login" element={<LoginPage {...props} />} />
         <Route path="/" element={<Home products={products}/>}></Route>
-        <Route path="/products/:id" element={  <Show products={products}/>}></Route>
+        <Route path="/products/:id" element={  <Show products={products} handleClick={props.handleClick}/>}></Route>
       </Routes>
       
     </div>
