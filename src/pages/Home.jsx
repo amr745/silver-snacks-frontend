@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import Show from "./Show";
 const Home = ({ products }) => {
   
 
