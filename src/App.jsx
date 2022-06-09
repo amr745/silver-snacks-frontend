@@ -39,7 +39,6 @@ function App() {
         user={userState.user} handleSignupOrLogin={handleSignupOrLogin}
         handleClick={handleClick}
       />
-      <Cart cartItem={cartItem} />
       <Footer />
     </div>
   );

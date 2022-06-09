@@ -7,6 +7,7 @@ import ProtectedRoute from "../components/Protected-Route"
 import { getToken } from '../services/tokenService';
 import Home from "../pages/Home";
 import Show from "../pages/Show";
+import Cart from "../pages/Cart";
 
 const Main = (props) => {
 
@@ -29,6 +30,7 @@ const Main = (props) => {
         <Route path="/login" element={<LoginPage {...props} />} />
         <Route path="/" element={<Home products={products}/>}></Route>
         <Route path="/products/:id" element={  <Show products={products} handleClick={props.handleClick}/>}></Route>
+        <Route path="/products/:id" element={<Cart products={products} />}></Route>
       </Routes>
       
     </div>
