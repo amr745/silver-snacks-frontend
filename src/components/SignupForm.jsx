@@ -66,6 +66,7 @@ function SignupForm({ updateMessage, handleSignupOrLogin }) {
                         value={formState.email}
                         name="email"
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div className="mb-3">
@@ -77,6 +78,7 @@ function SignupForm({ updateMessage, handleSignupOrLogin }) {
                         value={formState.password}
                         name="password"
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div className="mb-3">
@@ -88,6 +90,7 @@ function SignupForm({ updateMessage, handleSignupOrLogin }) {
                         value={formState.passwordConf}
                         name="passwordConf"
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div className="d-grid">

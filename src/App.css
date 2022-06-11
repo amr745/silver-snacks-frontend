@@ -1,15 +1,12 @@
-.show {
-  display: flex;
-  flex-grow: row wrap;
-  justify-content: center;
-  align-items: center;
+#product-data {
+  width: 10rem;
 }
 
 #product-image {
-  width: 15rem;
+  width: 10rem;
 }
 
-#logo-image {
+.logo-image {
   width: 10rem;
   border-radius: 10px;
 }

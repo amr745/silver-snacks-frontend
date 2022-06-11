@@ -23,6 +23,24 @@ const Main = (props) => {
 
   useEffect(() => { getProducts() }, []);
 
+  const updateQuantity = async (product) => {
+    await fetch((`${url}/cart`), {
+      method: "PUT",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(product)
+    })
+    getProducts();
+  }
+
+  const deleteProduct = async (id) => {
+    await fetch((`${url}/cart`), {
+      method: "DELETE",
+    })
+    getProducts();
+  }
+
   return (
     <div className="Main">
       <Routes>
