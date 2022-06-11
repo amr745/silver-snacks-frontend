@@ -21,12 +21,20 @@ function App() {
   const [cartItem, setCartItem] = useState([])
 
   const handleClick = (product) => {
-    
-    setCartItem((prevState) => {       
-      return [
-      ...prevState,
-      product 
-    ]})
+    setCartItem((prevState) => {
+      let existing = prevState.find(element => element._id === product._id);
+      if (existing) {
+        existing.selectedQty += 1;
+        return prevState;
+      } else {
+        product.selectedQty = 1;
+        return [
+          ...prevState,
+          product
+        ]
+      }
+
+    })
   }
 
   useEffect(() => {
@@ -35,7 +43,9 @@ function App() {
       _id: userState.user ? userState.user.email : "",
       products: cartItem,
     }
+
     cartFunction(cartObject)
+
     console.log("UseEffect", cartItem)
   }, [cartItem, userState])
 
