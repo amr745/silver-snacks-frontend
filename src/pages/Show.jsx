@@ -8,7 +8,7 @@ const Show = ({ products, handleClick }) => {
 
   return (
     <div className="Show">
-      <h1>{product.name}</h1>
+      <h3>{product.name}</h3>
       <img id="product-image" src={product.img} alt={product.name} />
       <h4>{product.price}</h4>
       <h4>{product.quantity}</h4>

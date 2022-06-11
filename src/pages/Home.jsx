@@ -8,7 +8,7 @@ const loaded = () => {
   return (
    <div className="Home">{products.map((product) => (
      <div className="product-data" key={product._id}>
-       <h1>{product.name}</h1>
+       <h3>{product.name}</h3>
        <Link to={`/products/${product._id}`}>
          <img id="product-data" src={product.img} alt={product.name} />
        </Link>
