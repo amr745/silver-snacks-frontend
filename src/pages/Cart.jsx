@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { MdOutlineRemoveShoppingCart } from "react-icons/md"
 
-const Cart = ( {products} ) => {
+const Cart = ({ products }) => {
     const isEmpty = !products;
 
     const EmptyCart = () => {
@@ -10,11 +10,14 @@ const Cart = ( {products} ) => {
 
     const FilledCart = () => {
         <>
-        {products.map((product) => (
-            <div key={product._id}>
-                <h4>{product.name}</h4>
-            </div>
-        ))}
+            {products.map((product) => (
+                <div key={product._id}>
+                    <h4>{product.name}</h4>
+                    <button>+</button>
+                    {product.selectedQuantity}
+                    <button>-</button>
+                </div>
+            ))}
         </>
     }
 
