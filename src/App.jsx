@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { getUser, logout } from "./services/signup";
 import Footer from "./components/Footer";
 import Cart from "./pages/Cart";
+import cartFunction from "./services/cartFunction";
+
 function App() {
   const [userState, setUserState] = useState({ user: getUser() });
 
@@ -19,18 +21,21 @@ function App() {
   const [cartItem, setCartItem] = useState([])
 
   const handleClick = (product) => {
-    setCartItem((prevState) => [
+    
+    setCartItem((prevState) => {       
+      return [
       ...prevState,
-      product
-    ])
+      product 
+    ]})
   }
 
   useEffect(() => {
     const cartObject = {
-      userId: userState.user.email,
-      _id: userState.user.email,
+      userId: userState.user ? userState.user.email : "",
+      _id: userState.user ? userState.user.email : "",
       products: cartItem,
     }
+    cartFunction(cartObject)
     console.log("UseEffect", cartItem)
   }, [cartItem, userState])
 
