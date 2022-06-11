@@ -20,22 +20,27 @@ function App() {
 
   const handleClick = (product) => {
     setCartItem((prevState) => [
-      ...prevState, 
+      ...prevState,
       product
     ])
   }
-  
+
   useEffect(() => {
+    const cartObject = {
+      userId: userState.user.email,
+      _id: userState.user.email,
+      products: cartItem,
+    }
     console.log("UseEffect", cartItem)
-  }, [cartItem])
+  }, [cartItem, userState])
 
   return (
     <div className="App">
-      <Header 
-        user={userState.user} 
-        handleLogout={handleLogout} 
+      <Header
+        user={userState.user}
+        handleLogout={handleLogout}
       />
-      <Main 
+      <Main
         user={userState.user} handleSignupOrLogin={handleSignupOrLogin}
         handleClick={handleClick}
       />
