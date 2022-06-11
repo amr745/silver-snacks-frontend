@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { MdOutlineRemoveShoppingCart, MdOutlineFu } from "react-icons/md"
 import { AiOutlineShoppingCart } from "react-icons/ai";
-const Cart = ({ cartItem }) => {
+const Cart = ({ cartItem, deleteProduct }) => {
     console.log("cartItem entry", cartItem)
 
     const [editQuantity, setEditQuantity] = useState([]);
@@ -22,10 +22,12 @@ const Cart = ({ cartItem }) => {
         //setEditQuantity((quantity) => quantity - 1)
     }
 
-    const handleRemoveCartItem = (productId) => {
-        setEditQuantity((prevState) => ({
-            cartItem: prevState.cartItem.filter(element => element != productId)
-        }))
+    const handleRemoveCartItem = (id) => {
+        const item = cartItem.find((product) => product._id === id)
+        deleteProduct(item)
+        // setEditQuantity((prevState) => ({
+        //     cartItem: prevState.cartItem.filter(element => element != productId)
+        // }))
     }
 
     const isEmpty = !cartItem;
@@ -42,7 +44,7 @@ const Cart = ({ cartItem }) => {
                     <button onClick={() => { handleClickIncrement(product._id) }}>+</button>
                     {product.selectedQty}
                     <button onClick={() => { handleChangeDecrement(product._id) }}>-</button>
-                    <button onClick={() => handleRemoveCartItem(product._id)}>Remove Item</button>
+                    <button onClick={() => {handleRemoveCartItem(product._id)}}>Remove Item</button>
                 </div>
             ))}
         </>
