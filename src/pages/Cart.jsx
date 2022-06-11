@@ -22,6 +22,12 @@ const Cart = ({ cartItem }) => {
         //setEditQuantity((quantity) => quantity - 1)
     }
 
+    const handleRemoveCartItem = (productId) => {
+        setEditQuantity((prevState) => ({
+            cartItem: prevState.cartItem.filter(element => element != productId)
+        }))
+    }
+
     const isEmpty = !cartItem;
 
     const EmptyCart = () => {
@@ -36,7 +42,7 @@ const Cart = ({ cartItem }) => {
                     <button onClick={() => { handleClickIncrement(product._id) }}>+</button>
                     {product.selectedQty}
                     <button onClick={() => { handleChangeDecrement(product._id) }}>-</button>
-                    <button>Remove Item</button>
+                    <button onClick={() => handleRemoveCartItem(product._id)}>Remove Item</button>
                 </div>
             ))}
         </>
