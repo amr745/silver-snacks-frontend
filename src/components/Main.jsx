@@ -23,6 +23,24 @@ const Main = (props) => {
 
   useEffect(() => { getProducts() }, []);
 
+  const updateQuantity = async (product) => {
+    await fetch((`${url}/cart`), {
+      method: "PUT",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(product)
+    })
+    getProducts();
+  }
+
+  const deleteProduct = async (id) => {
+    await fetch((`${url}/cart`), {
+      method: "DELETE",
+    })
+    getProducts();
+  }
+
   return (
     <div className="Main">
       <Routes>
@@ -30,7 +48,7 @@ const Main = (props) => {
         <Route path="/login" element={<LoginPage {...props} />} />
         <Route path="/" element={<Home products={products}/>}></Route>
         <Route path="/products/:id" element={  <Show products={products} handleClick={props.handleClick}/>}></Route>
-        <Route path="/products/:id" element={<Cart products={products} />}></Route>
+        <Route path="/cart" element={<Cart cartItem={props.cartItem} />}></Route>
       </Routes>
       
     </div>
