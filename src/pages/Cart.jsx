@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { MdOutlineRemoveShoppingCart } from "react-icons/md"
-
+import { MdOutlineRemoveShoppingCart, MdOutlineFu } from "react-icons/md"
+import { AiOutlineShoppingCart } from "react-icons/ai";
 const Cart = ( {cartItem} ) => {
     console.log(cartItem)
 
@@ -35,17 +35,22 @@ const Cart = ( {cartItem} ) => {
       )
     }
 
-   
-
-
- 
+    const emptyCart = <MdOutlineRemoveShoppingCart />
+    const fullCart = <AiOutlineShoppingCart />
+    const cartStatus = () => {
+        if(EmptyCart) {
+            return emptyCart
+        } else if (FilledCart) {
+           return fullCart
+        }
+    }
     return (
         <div className="Cart">
-            <h3><MdOutlineRemoveShoppingCart />Your Shopping Cart</h3>
+            <h3>Your Shopping Cart</h3>
             {isEmpty ? EmptyCart() : FilledCart()}
          
         </div>
     )
 }
 
-export default Cart
+export default Cart;
