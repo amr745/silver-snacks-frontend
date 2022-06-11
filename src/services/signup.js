@@ -5,7 +5,7 @@ function signup(user) {
     return (
         fetch(`${CONFIG.PROD.URL}/users/signup`, {
             method: "POST",
-            headers: new Headers({ "Content-Type": "application/json" }),
+            headers: new Headers({ "Content-Type": "Application/json" }),
             body: JSON.stringify(user),
         })
             .then((res) => {
