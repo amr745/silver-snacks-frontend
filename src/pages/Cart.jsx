@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { MdOutlineRemoveShoppingCart, MdOutlineFu } from "react-icons/md"
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove }) => {
+const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCart }) => {
     console.log("cartItem entry", cartItem)
 
     const [editQuantity, setEditQuantity] = useState([]);
@@ -46,6 +46,9 @@ const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove }) => {
                     {product.selectedQty}
                     <button onClick={() => { handleChangeDecrement(product._id) }}>-</button>
                     <button onClick={() => handleRemove(product._id)}>Remove Item</button>
+                    <div>
+                        <button onClick={() => handleClearCart(cart._id)}>Clear Cart</button>
+                    </div>
                 </div>
             ))}
         </>

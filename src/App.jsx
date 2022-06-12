@@ -45,6 +45,8 @@ function App() {
     })
   }
 
+ 
+
   useEffect(() => {
     const cartObject = {
       userId: userState.user ? userState.user.email : "",

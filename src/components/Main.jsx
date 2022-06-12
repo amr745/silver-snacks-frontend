@@ -34,6 +34,16 @@ const Main = (props) => {
     getProducts();
   }
 
+  const handleClearCart = async () => {
+    await fetch(`${url}/cart/${id}`), {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "Application/json",
+      }
+    }
+  
+  }
+
   const deleteProduct = async (id) => {
     await fetch((`${url}/cart/${id}`), {
       method: "DELETE",
@@ -48,7 +58,7 @@ const Main = (props) => {
         <Route path="/login" element={<LoginPage {...props} />} />
         <Route path="/" element={<Home products={products} />}></Route>
         <Route path="/products/:id" element={<Show products={products} handleClick={props.handleClick} />}></Route>
-        <Route path="/cart" element={<Cart cartItem={props.cartItem} handleRemove={props.handleRemove} />}></Route>
+        <Route path="/cart" element={<Cart cartItem={props.cartItem} handleRemove={props.handleRemove} handleClearCart={props.handleClearCart} />}></Route>
       </Routes>
 
     </div>
