@@ -17,4 +17,13 @@ function cartFunction(cartObject) {
     );
 }
 
-export default cartFunction;
+async function clearCart(userId) {
+    return(
+        await fetch(`${CONFIG.PROD.URL}/cart/${userId}`, {
+            method: "DELETE",
+            headers: new Headers({ "Content-Type": "Application/json" }),
+        })
+    )
+}
+
+export {cartFunction, clearCart};
