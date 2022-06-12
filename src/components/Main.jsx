@@ -48,7 +48,7 @@ const Main = (props) => {
         <Route path="/login" element={<LoginPage {...props} />} />
         <Route path="/" element={<Home products={products} />}></Route>
         <Route path="/products/:id" element={<Show products={products} handleClick={props.handleClick} />}></Route>
-        <Route path="/cart" element={<Cart cartItem={props.cartItem} />}></Route>
+        <Route path="/cart" element={<Cart cartItem={props.cartItem} handleRemove={props.handleRemove} />}></Route>
       </Routes>
 
     </div>

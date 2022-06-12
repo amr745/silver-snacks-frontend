@@ -37,6 +37,14 @@ function App() {
     })
   }
 
+  const handleRemove = (productId) => {
+    setCartItem((prevState) => {
+      let removedArray = prevState.filter(element => element._id !== productId);
+      return removedArray;
+
+    })
+  }
+
   useEffect(() => {
     const cartObject = {
       userId: userState.user ? userState.user.email : "",
@@ -58,6 +66,7 @@ function App() {
       <Main
         user={userState.user} handleSignupOrLogin={handleSignupOrLogin}
         handleClick={handleClick}
+        handleRemove={handleRemove}
         cartItem={cartItem}
       />
       <Footer />
