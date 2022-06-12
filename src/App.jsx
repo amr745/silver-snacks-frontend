@@ -65,7 +65,8 @@ function App() {
         handleLogout={handleLogout}
       />
       <Main
-        user={userState.user} handleSignupOrLogin={handleSignupOrLogin}
+        user={userState.user} 
+        handleSignupOrLogin={handleSignupOrLogin}
         handleClick={handleClick}
         cartItem={cartItem}
         handleRemove={handleRemove}
