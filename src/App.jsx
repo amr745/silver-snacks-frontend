@@ -37,17 +37,26 @@ function App() {
     })
   }
 
+  const handleRemove = (productId) => {
+    setCartItem((prevState) => {
+      let removedArray = prevState.filter(element => element._id !== productId);
+      console.log(removedArray)
+      return removedArray
+    })
+  }
+
+ 
+
   useEffect(() => {
     const cartObject = {
       userId: userState.user ? userState.user.email : "",
       _id: userState.user ? userState.user.email : "",
       products: cartItem,
     }
-
     cartFunction(cartObject)
-
     console.log("UseEffect", cartItem)
-  }, [cartItem, userState])
+  }, [cartItem, userState]);
+
 
   return (
     <div className="App">
@@ -56,9 +65,11 @@ function App() {
         handleLogout={handleLogout}
       />
       <Main
-        user={userState.user} handleSignupOrLogin={handleSignupOrLogin}
+        user={userState.user} 
+        handleSignupOrLogin={handleSignupOrLogin}
         handleClick={handleClick}
         cartItem={cartItem}
+        handleRemove={handleRemove}
       />
       <Footer />
     </div>
