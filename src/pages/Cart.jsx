@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { MdOutlineRemoveShoppingCart, MdOutlineFu } from "react-icons/md"
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useNavigate } from "react-router";
 
-const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCart, handleCheckout }) => {
+const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCart }) => {
     console.log("cartItem entry", cartItem)
 
     const [editQuantity, setEditQuantity] = useState([]);
+    let navigate = useNavigate()
 
     const handleClickIncrement = (productId) => {
         let existing = cartItem.find(element => element._id === productId);
@@ -29,6 +31,10 @@ const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCa
         // setEditQuantity((prevState) => ({
         //     cartItem: prevState.cartItem.filter(element => element != productId)
         // }))
+    }
+
+    const handleCheckout = () => {
+        navigate("/order")
     }
     
     const isEmpty = !cartItem;
