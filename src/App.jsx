@@ -45,11 +45,13 @@ function App() {
     })
   }
 
+
  const handleClearCart = async () => {
   await clearCart(userState.user.email)
   setCartItem([])
  }
 
+ 
   useEffect(() => {
     const cartObject = {
       userId: userState.user ? userState.user.email : "",
@@ -59,7 +61,6 @@ function App() {
     cartFunction(cartObject)
     console.log("UseEffect", cartItem)
   }, [cartItem, userState]);
-
 
   return (
     <div className="App">
