@@ -74,6 +74,7 @@ function App() {
         cartItem={cartItem}
         handleRemove={handleRemove}
         handleClearCart={handleClearCart}
+        cart
       />
       <Footer />
     </div>
