@@ -46,11 +46,11 @@ const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCa
                     {product.selectedQty}
                     <button onClick={() => { handleChangeDecrement(product._id) }}>-</button>
                     <button onClick={() => handleRemove(product._id)}>Remove Item</button>
-                    <div>
-                        <button onClick={() => handleClearCart(cartItem._id)}>Clear Cart</button>
-                    </div>
                 </div>
             ))}
+            <div>
+                <button onClick={handleClearCart}>Clear Cart</button>
+            </div>
         </>
         )
     }

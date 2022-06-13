@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { getUser, logout } from "./services/signup";
 import Footer from "./components/Footer";
 import Cart from "./pages/Cart";
-import cartFunction from "./services/cartFunction";
+import { cartFunction, clearCart } from "./services/cartFunction";
 
 function App() {
   const [userState, setUserState] = useState({ user: getUser() });
@@ -45,7 +45,10 @@ function App() {
     })
   }
 
- 
+ const handleClearCart = async () => {
+  await clearCart(userState.user.email)
+  setCartItem([])
+ }
 
   useEffect(() => {
     const cartObject = {
@@ -70,6 +73,7 @@ function App() {
         handleClick={handleClick}
         cartItem={cartItem}
         handleRemove={handleRemove}
+        handleClearCart={handleClearCart}
       />
       <Footer />
     </div>

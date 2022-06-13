@@ -34,16 +34,6 @@ const Main = (props) => {
     getProducts();
   }
 
-  const handleClearCart = async () => {
-    await fetch(`${url}/cart/${id}`), {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "Application/json",
-      }
-    }
-  
-  }
-
   const deleteProduct = async (id) => {
     await fetch((`${url}/cart/${id}`), {
       method: "DELETE",
