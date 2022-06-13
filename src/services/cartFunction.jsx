@@ -21,12 +21,11 @@ function cartFunction(cartObject) {
 
 async function clearCart(userId) {
     return (
-        await fetch(`${CONFIG.DEV.URL}/cart/${userId}`, {
+        await fetch(`${CONFIG.PROD.URL}/cart/${userId}`, {
             method: "DELETE",
             headers: new Headers({ "Content-Type": "Application/json" }),
         })
-
-    );
+    )
 }
 
 export { cartFunction, clearCart };
