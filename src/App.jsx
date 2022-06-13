@@ -60,7 +60,6 @@ function App() {
     console.log("UseEffect", cartItem)
   }, [cartItem, userState]);
 
-
   return (
     <div className="App">
       <Header
