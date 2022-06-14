@@ -1,15 +1,12 @@
-import { useNavigate } from "react-router";
+
 
 const Order = ({cartItem}) => {
 
-    let navigate = useNavigate();
+
 
     let priceArr = [];
 
     cartItem.forEach((element) => {
-        // if(element.quantity > 1) {
-        //     priceArr.push((element.price) * element.quantity)
-        // } 
         priceArr.push((element.price) * (element.selectedQty));
     })
 
@@ -17,10 +14,6 @@ const Order = ({cartItem}) => {
 
     let total = (subTotal * 0.07) + subTotal; 
     
-  
-    const handleSubmit = () => {
-        navigate("/submit")
-    }
     
     return (
         <div>
@@ -36,7 +29,7 @@ const Order = ({cartItem}) => {
           <div>
             <h2>Total: {total.toFixed(2)}</h2>
           </div>
-          <button onClick={() => handleSubmit()}>Submit Order</button>
+          <button>Submit Order</button>
         </div>
     )
 }

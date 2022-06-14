@@ -9,7 +9,6 @@ import Home from "../pages/Home";
 import Show from "../pages/Show";
 import Cart from "../pages/Cart";
 import Order from "../pages/Order";
-import Submit from "../pages/Submit";
 
 const Main = (props) => {
 
@@ -52,7 +51,6 @@ const Main = (props) => {
         <Route path="/products/:id" element={<Show products={products} handleClick={props.handleClick} />}></Route>
         <Route path="/cart" element={<Cart cartItem={props.cartItem} handleRemove={props.handleRemove} handleClearCart={props.handleClearCart} />}></Route>
         <Route path="/order" element={<Order cartItem={props.cartItem} handleCheckout={props.handleCheckout}/>}></Route>
-        <Route path="/submit" element={<Submit />}></Route>
       </Routes>
 
     </div>
