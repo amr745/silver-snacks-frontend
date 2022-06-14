@@ -8,8 +8,8 @@ const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCa
     console.log("cartItem entry", cartItem)
 
     const [editQuantity, setEditQuantity] = useState([]);
-    const [cartItems, setCartItems] = useState(cartItem);
-    let navigate = useNavigate()
+
+    let navigate = useNavigate();
 
     const handleRemoveCartItem = (id) => {
         const item = cartItem.find((product) => product._id === id)
