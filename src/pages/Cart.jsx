@@ -24,13 +24,6 @@ const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCa
         } 
     }
 
-    // const handleRemoveCartItem = (id) => {
-    //     const item = cartItem.find((product) => product._id === id)
-    //     deleteProduct(item)
-    //     // setEditQuantity((prevState) => ({
-    //     //     cartItem: prevState.cartItem.filter(element => element != productId)
-    //     // }))
-    // }
 
     const handleCheckout = () => {
         navigate("/order")

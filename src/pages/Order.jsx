@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router";
 
-const order = ({cartItem}) => {
+const Order = ({cartItem}) => {
 
-
+    let navigate = useNavigate();
 
     let priceArr = [];
 
@@ -12,16 +12,16 @@ const order = ({cartItem}) => {
         // } 
         priceArr.push((element.price) * (element.selectedQty));
     })
-    console.log(priceArr)
 
     let subTotal = priceArr.reduce((a, b) => a + b);
 
-    console.log(subTotal)
-
-    let total = (subTotal * 0.07) + subTotal;    
+    let total = (subTotal * 0.07) + subTotal; 
     
-
-
+  
+    const handleSubmit = () => {
+        navigate("/submit")
+    }
+    
     return (
         <div>
             {cartItem.map((item) => (
@@ -36,9 +36,9 @@ const order = ({cartItem}) => {
           <div>
             <h2>Total: {total.toFixed(2)}</h2>
           </div>
-          <button>Submit Order</button>
+          <button onClick={() => handleSubmit()}>Submit Order</button>
         </div>
     )
 }
 
-export default order;
+export default Order;
