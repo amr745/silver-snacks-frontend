@@ -1,27 +1,20 @@
-import { useNavigate } from "react-router";
 
-const order = ({cartItem}) => {
+
+const Order = ({cartItem}) => {
 
 
 
     let priceArr = [];
 
     cartItem.forEach((element) => {
-        // if(element.quantity > 1) {
-        //     priceArr.push((element.price) * element.quantity)
-        // } 
         priceArr.push((element.price) * (element.selectedQty));
     })
-    console.log(priceArr)
 
     let subTotal = priceArr.reduce((a, b) => a + b);
 
-    console.log(subTotal)
-
-    let total = (subTotal * 0.07) + subTotal;    
+    let total = (subTotal * 0.07) + subTotal; 
     
-
-
+    
     return (
         <div>
             {cartItem.map((item) => (
@@ -41,4 +34,4 @@ const order = ({cartItem}) => {
     )
 }
 
-export default order;
+export default Order;

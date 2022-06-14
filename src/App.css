@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Poppins:wght@100&display=swap');
+
 #product-data {
   width: 10rem;
 }
@@ -11,3 +13,19 @@
   border-radius: 10px;
 }
 
+
+.Home {
+  display:grid;
+  row-gap: 15rem;
+  grid-template-rows: 150px 150px;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns:repeat(3 ,1fr);
+  grid-template-columns:30% repeat(2,1fr);
+  padding: 5rem;
+}
+
+.product-data {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(2, 38, 74);
+  font-weight: bolder;
+}
