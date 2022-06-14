@@ -16,7 +16,8 @@
   display:grid;
   row-gap: 15rem;
   grid-template-rows: 150px 150px;
-  grid-template-columns:1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 2fr;
   grid-template-columns:repeat(3 ,1fr);
-  grid-template-columns:50% repeat(2,1fr);
+  grid-template-columns:30% repeat(2,1fr);
+  padding: 5rem;
 }
