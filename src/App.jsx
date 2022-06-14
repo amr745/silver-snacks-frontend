@@ -44,13 +44,15 @@ function App() {
     })
   }
 
+  const handleClearCart = async () => {
+    await clearCart(userState.user.email)
+    setCartItem([])
+  }
 
- const handleClearCart = async () => {
-  await clearCart(userState.user.email)
-  setCartItem([])
- }
 
- 
+
+
+
   useEffect(() => {
     const cartObject = {
       userId: userState.user ? userState.user.email : "",
@@ -68,13 +70,13 @@ function App() {
         handleLogout={handleLogout}
       />
       <Main
-        user={userState.user} 
+        user={userState.user}
         handleSignupOrLogin={handleSignupOrLogin}
         handleClick={handleClick}
+        handleRemove={handleRemove}
         cartItem={cartItem}
         handleRemove={handleRemove}
         handleClearCart={handleClearCart}
-        cart
       />
       <Footer />
     </div>

@@ -50,9 +50,8 @@ const Main = (props) => {
         <Route path="/" element={<Home products={products} />}></Route>
         <Route path="/products/:id" element={<Show products={products} handleClick={props.handleClick} />}></Route>
         <Route path="/cart" element={<Cart cartItem={props.cartItem} handleRemove={props.handleRemove} handleClearCart={props.handleClearCart} />}></Route>
-        <Route path="/order" element={<Order cartItem={props.cartItem} handleCheckout={props.handleCheckout}/>}></Route>
+        <Route path="/order" element={<Order cartItem={props.cartItem} handleCheckout={props.handleCheckout} handleClearCart={props.handleClearCart} />}></Route>
       </Routes>
-
     </div>
   )
 }

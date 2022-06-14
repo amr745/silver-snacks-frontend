@@ -13,6 +13,55 @@
   border-radius: 10px;
 }
 
+.order-list-summary {
+  
+}
+
+.order-list {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.order-summary {
+
+  width: 80%;
+  display: flex;
+  margin: auto;
+  padding: 20px;
+}
+
+.order-summary-items {
+  /* align-self: flex-end;
+  right: 0; */
+ 
+}
+
+.order-placed {
+  color: green;
+  justify-content: center;
+  text-align: center;
+}
+
+.place-order-button {
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.order-img-item {
+  width: 40px;
+  height: 60px;
+}
+
+.order {
+  font-family: 'Bitter', serif;
+  /* background: url(https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+}
 
 .Home {
   display:grid;
