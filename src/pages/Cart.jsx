@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { MdOutlineRemoveShoppingCart, MdOutlineFu } from "react-icons/md"
-import { AiOutlineShoppingCart } from "react-icons/ai";
-
+import { AiOutlineShoppingCart, AiOutlinePlusSquare, AiOutlineMinusSquare } from "react-icons/ai";
+import { ImCross } from "react-icons/im";
+import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 
 const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCart }) => {
@@ -14,9 +15,6 @@ const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCa
     const handleRemoveCartItem = (id) => {
         const item = cartItem.find((product) => product._id === id)
         deleteProduct(item)
-        // setEditQuantity((prevState) => ({
-        //     cartItem: prevState.cartItem.filter(element => element != productId)
-        // }))
     }
     const handleClickIncrement = (productId) => {
         let existing = cartItem.find(element => element._id === productId);
@@ -45,25 +43,32 @@ const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCa
 
 
     const FilledCart = () => {
-        return (<>
+        return (<div className="cart-entire">
             {cartItem.map((product) => (
-                <div key={product._id}>
-                    <h4>{product.name}</h4>
-                    <button onClick={() => { handleClickIncrement(product._id) }}>+</button>
-                    {product.selectedQty}
-                    <button onClick={() => { handleChangeDecrement(product._id) }}>-</button>
-                    <button onClick={() => handleRemove(product._id)}>Remove Item</button>
+                <div key={product._id} className="cart-items">
+                    <div className="cart-product-img">
+                        <img style={{ height: '25px', width: '25px' }} src={product.img} /><h4 className="cart-product-name">
+                            {product.name}</h4>
+                    </div>
+                    <div className="cart-item-list">
+                        <Button className="cart-item-inc-dec" onClick={() => { handleClickIncrement(product._id) }}>+</Button>
+                        {product.selectedQty}
+                        <Button className="cart-item-inc-dec" onClick={() => { handleChangeDecrement(product._id) }}>-</Button>
+                        <Button className="cart-remove-item-button" onClick={() => handleRemove(product._id)}>Remove Item</Button>
+                    </div>
                 </div>
 
             ))}
 
-            <div>
-                <button onClick={handleClearCart}>Clear Cart</button>
+            <div className="cart-clear-checkout">
+                <div>
+                    <Button style={{ marginLeft: "10px" }} onClick={handleClearCart}>Clear Cart</Button>
+                </div>
+                <div>
+                    <Button style={{ marginLeft: "10px" }} onClick={handleCheckout}>Checkout</Button>
+                </div>
             </div>
-            <div>
-                <button onClick={handleCheckout}>Checkout</button>
-            </div>
-        </>
+        </div>
         )
     }
 
@@ -77,8 +82,8 @@ const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCa
         }
     }
     return (
-        <div className="Cart">
-            <h3>Your Shopping Cart</h3>
+        <div className="cart">
+            <h3 className="cart-header">Your Shopping Cart</h3>
             {isEmpty ? EmptyCart() : FilledCart()}
 
         </div>

@@ -32,9 +32,9 @@ const Order = ({ cartItem }) => {
                     <h3>Order List</h3>
                     <div>
                         <Row>
-                            <Col style={{ fontWeight: 'bold' }}>Product</Col>
-                            <Col style={{ fontWeight: 'bold' }}>Qty</Col>
-                            <Col style={{ fontWeight: 'bold' }}>Price</Col>
+                            <Col style={{ fontWeight: 'bolder' }}>Product</Col>
+                            <Col style={{ fontWeight: 'bolder' }}>Qty</Col>
+                            <Col style={{ fontWeight: 'bolder' }}>Price</Col>
                         </Row>
 
                     </div>
