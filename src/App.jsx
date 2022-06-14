@@ -3,7 +3,6 @@ import Main from "./components/Main";
 import { useState, useEffect } from "react";
 import { getUser, logout } from "./services/signup";
 import Footer from "./components/Footer";
-import Cart from "./pages/Cart";
 import { cartFunction, clearCart } from "./services/cartFunction";
 
 function App() {
@@ -45,11 +44,13 @@ function App() {
     })
   }
 
+
  const handleClearCart = async () => {
   await clearCart(userState.user.email)
   setCartItem([])
  }
 
+ 
   useEffect(() => {
     const cartObject = {
       userId: userState.user ? userState.user.email : "",
@@ -73,6 +74,7 @@ function App() {
         cartItem={cartItem}
         handleRemove={handleRemove}
         handleClearCart={handleClearCart}
+        cart
       />
       <Footer />
     </div>
