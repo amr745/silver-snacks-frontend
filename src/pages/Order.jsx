@@ -1,15 +1,14 @@
-import { useNavigate } from "react-router";
 
-const order = ({cartItem}) => {
+import React from "react";
+import { Row, Col, Button } from "react-bootstrap";
 
+const Order = ({ cartItem, handleClearCart }) => {
 
+    const [isOrderPlaced, setIsOrderPlaced] = React.useState(false);
 
     let priceArr = [];
 
     cartItem.forEach((element) => {
-        // if(element.quantity > 1) {
-        //     priceArr.push((element.price) * element.quantity)
-        // } 
         priceArr.push((element.price) * (element.selectedQty));
     })
     console.log(priceArr)
@@ -18,27 +17,64 @@ const order = ({cartItem}) => {
 
     console.log(subTotal)
 
-    let total = (subTotal * 0.07) + subTotal;    
-    
+    let total = (subTotal * 0.07) + subTotal;
+
 
 
     return (
-        <div>
-            {cartItem.map((item) => (
-                <div key={item._id}>
-                    <h1>{item.name}</h1>
+        <div className="order">
+            {isOrderPlaced && <div className="order-placed">
+                <h1>Thank You!! </h1>
+                <h3>Your Order has been placed.</h3>
+            </div>}
+            <div className="order-list-summary">
+                <div className="order-list">
+                    <h3>Order List</h3>
+                    <div>
+                        <Row>
+                            <Col style={{ fontWeight: 'bold' }}>Product</Col>
+                            <Col style={{ fontWeight: 'bold' }}>Qty</Col>
+                            <Col style={{ fontWeight: 'bold' }}>Price</Col>
+                        </Row>
+
+                    </div>
+                    {cartItem.map((item) => (
+                        <div key={item._id} className="order-list-items">
+                            <Row>
+                                <Col style={{
+                                }}>
+                                    <img className="order-img-item" src={item.img} />{`${item.name}`}
+                                </Col>
+                                <Col style={{
+                                }}>
+                                    {item.selectedQty}
+                                </Col>
+                                <Col style={{
+                                }}>
+                                    {item.price}
+                                </Col>
+                            </Row>
+
+                        </div>
+                    ))}
                 </div>
-            ))}
-          <div>
-            <h2>Subtotal: {subTotal.toFixed(2)}</h2>
-            <h2>Tax: 7% </h2>
-          </div>
-          <div>
-            <h2>Total: {total.toFixed(2)}</h2>
-          </div>
-          <button>Submit Order</button>
-        </div>
+                <div className="order-summary">
+                    <div className="order-summary-items">
+                        <h3>Order Summary</h3>
+                        <div>
+                            <p>Subtotal: {subTotal.toFixed(2)}</p>
+                            <p>Tax: 7% </p>
+                            <p>Total: {total.toFixed(2)}</p>
+                        </div>
+                    </div>
+                </div>
+            </div >
+            {!isOrderPlaced && <div className="place-order-button">
+                <Button variant="primary" onClick={() => { setIsOrderPlaced(true); }}>Place Order</Button>
+
+            </div>}
+        </div >
     )
 }
 
-export default order;
+export default Order;
