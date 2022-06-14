@@ -6,33 +6,31 @@ import { useNavigate } from "react-router";
 const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCart }) => {
     console.log("cartItem entry", cartItem)
 
-    const [editQuantity, setEditQuantity] = useState([]);
+    const [editQuantity, setEditQuantity] = useState(null);
 
     let navigate = useNavigate();
 
     const handleClickIncrement = (productId) => {
         let existing = cartItem.find(element => element._id === productId);
         if (existing) {
-            existing.selectedQty += 1;
+            setEditQuantity(existing.selectedQty += 1);
         }
-        //setEditQuantity((quantity) => quantity + 1)
     }
 
     const handleChangeDecrement = (productId) => {
         let existing = cartItem.find(element => element._id === productId);
         if (existing) {
-            existing.selectedQty -= 1;
-        }
-        //setEditQuantity((quantity) => quantity - 1)
+            setEditQuantity(existing.selectedQty -= 1);
+        } 
     }
 
-    const handleRemoveCartItem = (id) => {
-        const item = cartItem.find((product) => product._id === id)
-        deleteProduct(item)
-        // setEditQuantity((prevState) => ({
-        //     cartItem: prevState.cartItem.filter(element => element != productId)
-        // }))
-    }
+    // const handleRemoveCartItem = (id) => {
+    //     const item = cartItem.find((product) => product._id === id)
+    //     deleteProduct(item)
+    //     // setEditQuantity((prevState) => ({
+    //     //     cartItem: prevState.cartItem.filter(element => element != productId)
+    //     // }))
+    // }
 
     const handleCheckout = () => {
         navigate("/order")
