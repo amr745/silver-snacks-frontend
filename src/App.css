@@ -21,11 +21,29 @@
   grid-template-columns: 1fr 1fr 2fr;
   grid-template-columns:repeat(3 ,1fr);
   grid-template-columns:30% repeat(2,1fr);
-  padding: 5rem;
+  padding: 9rem;
+  padding-right: 0;
+  grid-gap: 20px 40px 10px;
 }
 
-.product-data {
+.product-data, h3{
   font-family: 'Poppins', sans-serif;
-  color: rgb(2, 38, 74);
   font-weight: bolder;
+  color: black;
+}
+
+.footer, p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  color: gray;
+}
+
+.footer-icons, h1 {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
