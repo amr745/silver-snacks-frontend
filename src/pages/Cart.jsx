@@ -4,7 +4,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 import { useNavigate } from "react-router";
 
-const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCart, handleClickIncrement, handleChangeDecrement }) => {
+const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCart }) => {
     console.log("cartItem entry", cartItem)
 
     const [editQuantity, setEditQuantity] = useState(null);
