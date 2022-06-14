@@ -1,6 +1,8 @@
-
+import { useNavigate } from "react-router";
 
 const order = ({cartItem}) => {
+
+
 
     let priceArr = [];
 
@@ -34,6 +36,7 @@ const order = ({cartItem}) => {
           <div>
             <h2>Total: {total.toFixed(2)}</h2>
           </div>
+          <button>Submit Order</button>
         </div>
     )
 }

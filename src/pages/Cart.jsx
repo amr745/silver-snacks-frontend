@@ -7,7 +7,8 @@ const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCa
     console.log("cartItem entry", cartItem)
 
     const [editQuantity, setEditQuantity] = useState([]);
-    let navigate = useNavigate()
+
+    let navigate = useNavigate();
 
     const handleClickIncrement = (productId) => {
         let existing = cartItem.find(element => element._id === productId);
@@ -48,9 +49,9 @@ const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCa
             {cartItem.map((product) => (
                 <div key={product._id}>
                     <h4>{product.name}</h4>
-                    <button onClick={() => { handleClickIncrement(product._id) }}>+</button>
+                    <button onClick={() => { handleClickIncrement(product._id)}}>+</button>
                     {product.selectedQty}
-                    <button onClick={() => { handleChangeDecrement(product._id) }}>-</button>
+                    <button onClick={() => { handleChangeDecrement(product._id)}}>-</button>
                     <button onClick={() => handleRemove(product._id)}>Remove Item</button>
                 </div>
             ))}
