@@ -4,28 +4,12 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 import { useNavigate } from "react-router";
 
-const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCart }) => {
+const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCart, handleClickIncrement, handleChangeDecrement }) => {
     console.log("cartItem entry", cartItem)
 
     const [editQuantity, setEditQuantity] = useState([]);
+    const [cartItems, setCartItems] = useState(cartItem);
     let navigate = useNavigate()
-
-
-    const handleClickIncrement = (productId) => {
-        let existing = cartItem.find(element => element._id === productId);
-        if (existing) {
-            existing.selectedQty += 1;
-        }
-        //setEditQuantity((quantity) => quantity + 1)
-    }
-
-    const handleChangeDecrement = (productId) => {
-        let existing = cartItem.find(element => element._id === productId);
-        if (existing) {
-            existing.selectedQty -= 1;
-        }
-        //setEditQuantity((quantity) => quantity - 1)
-    }
 
     const handleRemoveCartItem = (id) => {
         const item = cartItem.find((product) => product._id === id)

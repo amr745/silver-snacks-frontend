@@ -50,6 +50,28 @@ function App() {
     setCartItem([])
   }
 
+  const handleClickIncrement = (productId) => {
+    setCartItem((prevState) => {
+      let existing = prevState.find(element => element._id === productId);
+      if (existing) {
+        existing.selectedQty += 1;
+      }
+      return prevState;
+    });
+    //setEditQuantity((quantity) => quantity + 1)
+  }
+
+  const handleChangeDecrement = (productId) => {
+    setCartItem((prevState) => {
+      let existing = prevState.find(element => element._id === productId);
+      if (existing) {
+        existing.selectedQty -= 1;
+      }
+      return prevState;
+    });
+    //setEditQuantity((quantity) => quantity - 1)
+  }
+
 
   useEffect(() => {
     const cartObject = {
@@ -75,6 +97,8 @@ function App() {
         cartItem={cartItem}
         handleRemove={handleRemove}
         handleClearCart={handleClearCart}
+        handleClickIncrement={handleClickIncrement}
+        handleChangeDecrement={handleChangeDecrement}
       />
       <Footer />
     </div>
