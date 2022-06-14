@@ -13,7 +13,7 @@ function Header({ user, handleLogout }) {
       <Container>
         <Navbar.Brand as={Link} to="/"><img className="logo-image" src={logo} alt="logo image"></img></Navbar.Brand>
         <Nav className="me-auto">
-        <Nav.Link as={Link} to="/"><FaHome />Home</Nav.Link>
+          <Nav.Link as={Link} to="/"><FaHome />Home</Nav.Link>
           <Nav.Link as={Link} to="/signup"><FaUser /> Sign Up</Nav.Link>
           <Nav.Link as={Link} to="/login"><FaSignInAlt /> Login</Nav.Link>
           <Nav.Link as={Link} to="/cart"><AiOutlineShoppingCart /> Cart</Nav.Link>
@@ -24,11 +24,11 @@ function Header({ user, handleLogout }) {
       <Container>
         <Navbar.Brand as={Link} to="/"><img className="logo-image" src={logo} alt="logo image" /></Navbar.Brand>
         <Nav className="me-auto">
-        <Nav.Link as={Link} to="/"><FaHome /> Home</Nav.Link>
-        <Nav.Link as={Link} to="/cart"><AiOutlineShoppingCart /> Cart</Nav.Link>
+          <Nav.Link as={Link} to="/"><FaHome /> Home</Nav.Link>
+          <Nav.Link as={Link} to="/cart"><AiOutlineShoppingCart /> Cart</Nav.Link>
           <Nav.Link as={Link} to="#" onClick={handleLogout}
-          ><FaSignOutAlt/> Logout</Nav.Link>
-          <h5>Welcome {user.name}</h5>
+          ><FaSignOutAlt /> Logout</Nav.Link>
+          <h5>Welcome {user.name}!</h5>
         </Nav>
       </Container>
     </Navbar>)
