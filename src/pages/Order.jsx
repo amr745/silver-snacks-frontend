@@ -2,7 +2,8 @@
 import React from "react";
 import { Row, Col, Button } from "react-bootstrap";
 
-const Order = ({ cartItem, handleClearCart }) => {
+
+const Order = ({ cartItem }) => {
 
     const [isOrderPlaced, setIsOrderPlaced] = React.useState(false);
 
@@ -11,7 +12,6 @@ const Order = ({ cartItem, handleClearCart }) => {
     cartItem.forEach((element) => {
         priceArr.push((element.price) * (element.selectedQty));
     })
-    console.log(priceArr)
 
     let subTotal = priceArr.reduce((a, b) => a + b);
 

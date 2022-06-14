@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCart, handleClickIncrement, handleChangeDecrement }) => {
     console.log("cartItem entry", cartItem)
 
-    const [editQuantity, setEditQuantity] = useState([]);
+    const [editQuantity, setEditQuantity] = useState(null);
 
     let navigate = useNavigate();
 
@@ -17,6 +17,19 @@ const Cart = ({ cartItem, deleteProduct, cartObject, handleRemove, handleClearCa
         // setEditQuantity((prevState) => ({
         //     cartItem: prevState.cartItem.filter(element => element != productId)
         // }))
+    }
+    const handleClickIncrement = (productId) => {
+        let existing = cartItem.find(element => element._id === productId);
+        if (existing) {
+            setEditQuantity(existing.selectedQty += 1);
+        }
+    }
+
+    const handleChangeDecrement = (productId) => {
+        let existing = cartItem.find(element => element._id === productId);
+        if (existing) {
+            setEditQuantity(existing.selectedQty -= 1);
+        }
     }
 
 
