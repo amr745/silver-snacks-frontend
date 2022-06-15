@@ -2,7 +2,7 @@ import { FaCcVisa, FaCcStripe, FaBtc } from "react-icons/fa"
 
 const Footer = () => {
   return (
-    <footer className="footer" style={{ backgroundColor: "darkslateblue" }}>
+    <footer className="footer" style={{ backgroundColor: "darkblue" }}>
       <p className="footer-tag">Silver Snacks Emporium: So good, you'll unhinge your jaw!</p>
       <p className="footer-rights">SSE All Right Reserved®</p>
       <div className="footer-icons">
