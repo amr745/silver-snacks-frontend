@@ -21,12 +21,6 @@ const Home = ({ products }) => {
                   <Button className="product-card-price" variant="primary">${product.price}</Button>
                 </Card.Body>
               </Card>
-
-              {/* <Link style={{ textDecoration: "none" }} to={`/products/${product._id}`}> <h3>{product.name}</h3></Link>
-          <Link to={`/products/${product._id}`}>
-            <img id="product-data" src={product.img} alt={product.name} />
-          </Link>
-          <h2>${product.price}</h2> */}
             </div>
           </Col>
         ))}
