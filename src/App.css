@@ -66,6 +66,10 @@
   color: rgb(0, 0, 0);
 }
 
+h5 {
+  color: white;
+}
+
 .Home {
   display:grid;
   row-gap: 15rem;
@@ -166,11 +170,11 @@
 
 .footer {
   position: fixed;
-   left:0px;
-   bottom:0px;
-   height: 100px;
-   width:100%;
-  background-color: rgb(6, 99, 253);
+  left:0px;
+  bottom:0px;
+  height: 100px;
+  width:100%;
+  background-color: rgb(12, 102, 246);
   color: white;
   text-align: center;
   font-family: 'Poppins', sans-serif;
@@ -217,4 +221,9 @@
 
 #home-bg {
   background-color: whitesmoke;
+}
+
+.order-list-items {
+  text-shadow: 1px 4px 5px rgb(2, 2, 2);
+  color: rgb(10, 9, 9);
 }
