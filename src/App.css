@@ -58,12 +58,12 @@
 
 .order {
   font-family: 'Bitter', serif;
-  /* background: url(https://blog.dieutek.com/wp-content/uploads/2020/09/eCommerce-website-search-customer-experience.jpg) no-repeat center center fixed; 
+  background: url(https://blog.dieutek.com/wp-content/uploads/2020/09/eCommerce-website-search-customer-experience.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: rgb(0, 0, 0); */
+  color: rgb(0, 0, 0);
 }
 
 .Home {
@@ -215,6 +215,6 @@
   color: white;
 }
 
-.home-bg {
+#home-bg {
   background-color: whitesmoke;
 }
