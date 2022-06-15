@@ -23,7 +23,7 @@ function Header({ user, handleLogout }) {
     (<Navbar bg="primary" variant="dark">
       <Container>
         <Navbar.Brand as={Link} to="/"><img className="logo-image" src={logo} alt="logo image" /></Navbar.Brand>
-        <Nav className="me-auto">
+        <Nav className="d-inline-flex p-2 bd-highlight">
           <Nav.Link as={Link} to="/"><FaHome /> Home</Nav.Link>
           <Nav.Link as={Link} to="/cart"><AiOutlineShoppingCart /> Cart</Nav.Link>
           <Nav.Link as={Link} to="#" onClick={handleLogout}

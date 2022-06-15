@@ -32,8 +32,8 @@
 }
 
 .order-summary-items {
-  /* align-self: flex-end;
-  right: 0; */
+  align-self: flex-end;
+  right: 0;
  
 }
 
