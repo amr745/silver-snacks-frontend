@@ -48,19 +48,22 @@
   text-align: center;
   margin-bottom: 20px;
 }
-
+/* .order-list-summary {
+  background-image: linear-gradient(to bottom, #ffffff60 0%, rgb(255, 255, 255) 100%);
+} */
 .order-img-item {
   width: 40px;
   height: 35px;
 }
 
 .order {
-  font-family: 'Poppins', sans-serif;
-  /* background: url(https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) no-repeat center center fixed; 
+  font-family: 'Bitter', serif;
+  /* background: url(https://blog.dieutek.com/wp-content/uploads/2020/09/eCommerce-website-search-customer-experience.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; */
+  background-size: cover;
+  color: rgb(0, 0, 0); */
 }
 
 .Home {
@@ -70,15 +73,16 @@
   grid-template-columns: 1fr 1fr 2fr;
   grid-template-columns:repeat(3 ,1fr);
   grid-template-columns:30% repeat(2,1fr);
-  padding: 9rem;
-  padding-right: 0;
-  grid-gap: 20px 40px 10px;
+  padding: 5rem;
+  
 }
 
 .product-data, h3, h5{
   font-family: 'Poppins', sans-serif;
   /* font-family: 'Bitter', serif; */
   font-weight: bolder;
+  /* height: 262px;
+  width: 170px; */
 }
 
 .cart {
@@ -151,15 +155,6 @@
   margin-bottom: 20pt;
 }
 
-.show-button {
-  background-color: rgb(6, 99, 253);
-  color: white;
-}
-
-.show-button:hover {
-  color: rgb(86, 131, 229);
-}
-
 .show-qnt{
   color: red;
   margin-top: 20pt;
@@ -171,10 +166,10 @@
 
 .footer {
   position: fixed;
-  left:0px;
-  bottom:0px;
-  height: 100px;
-  width:100%;
+   left:0px;
+   bottom:0px;
+   height: 100px;
+   width:100%;
   background-color: rgb(6, 99, 253);
   color: white;
   text-align: center;
@@ -199,3 +194,27 @@
   grid-column-gap: 0rem;
 }
 
+.product-card-img {
+  height: 260px;
+  width: 260px;
+  margin-left: 12px;
+  margin-top: 20px;
+}
+
+.product-card-price {
+  display: flex;
+    text-align: center;
+    margin: auto;
+    background-color: ghostwhite;
+    color: black;
+}
+
+.product-card-name {
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+.home-bg {
+  background-color: whitesmoke;
+}

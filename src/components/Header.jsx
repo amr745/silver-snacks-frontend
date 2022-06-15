@@ -9,7 +9,7 @@ function Header({ user, handleLogout }) {
   const logo = "https://i.imgur.com/TDB1QQv.png";
   return !user ?
 
-    (<Navbar bg="primary" variant="dark">
+    (<Navbar style={{ backgroundColor: "darkslateblue" }} variant="dark">
       <Container>
         <Navbar.Brand as={Link} to="/"><img className="logo-image" src={logo} alt="logo image"></img></Navbar.Brand>
         <Nav className="d-inline-flex p-2 bd-highlight">
@@ -20,7 +20,7 @@ function Header({ user, handleLogout }) {
         </Nav>
       </Container>
     </Navbar>) :
-    (<Navbar bg="primary" variant="dark">
+    (<Navbar style={{ backgroundColor: "darkslateblue" }} variant="dark">
       <Container>
         <Navbar.Brand as={Link} to="/"><img className="logo-image" src={logo} alt="logo image" /></Navbar.Brand>
         <Nav className="d-inline-flex p-2 bd-highlight">

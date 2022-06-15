@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Silver Snacks Emporium
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Silver Snacks Emporium is a full CRUD eCommerce application that stores and handles products, purchases, and user authentication information using MongoDB.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Screenshots
 
-### `npm start`
+![Main Product](https://imgur.com/cGCB9cp.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Show Page For Products](https://imgur.com/LWctZYu.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Edit Page for Product](https://imgur.com/IzHrIWR.png)
 
-### `npm test`
+![Order Summary for Products](https://imgur.com/fqywXMz.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Registration Page](https://imgur.com/fMOTerA.png)
 
-### `npm run build`
+![Login Page](https://imgur.com/hqyGIUN.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## User Stories
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As a user, I want to be able to see products displayed on a main page.
+As a user, I want to be able to sign up for an account.
+As a user, I want to be able to sign in and out of my account. 
+As a user, I want to be able to click on an item and view information about that item.
+As a user, I want to be able to click a buy now button and have items added to my cart. 
+As a user, I want to be able to view items saved in my cart.
+As a user, I want to be able to increase or decrease the amount of items in my cart.
+As a user, I want to be able to remove items from my cart.
+As a user, I want to be able to check out my order and get a calculated total. 
+As a user, I want to be able to see my order summary after my order is placed.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Backend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+MongoDB
+Colors
+express
+mongoose
+dotenv
+morgan
+nodemon
+Heroku
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Frontend
 
-## Learn More
+React.js
+JaveScript
+HTML5
+React Icons
+CSS
+Bootstrap
+Netlify
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[Click Here](https://github.com/Vanillajaviscript/project-3--backend) to see Backend Repo.
 
-### Analyzing the Bundle Size
+[Click Here](https://trello.com/b/4UDGr6bi/project-3) to view Trello Board.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[Click Here](https://silver-snacks-emporium.herokuapp.com/products) to see deployed Heroku app.
 
-### Making a Progressive Web App
+[Click Here]() to see deployed Netlify app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Add authorization. 
