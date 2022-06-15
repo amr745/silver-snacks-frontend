@@ -2,7 +2,6 @@ import { useParams } from "react-router";
 import { useState } from "react"
 import "../App.css"
 import { Button } from "react-bootstrap";
-
 const Show = ({ products, handleClick }) => {
   const { id } = useParams();
   const product = products.find((product) => product._id === id);

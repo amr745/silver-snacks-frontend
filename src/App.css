@@ -20,7 +20,9 @@ html, body, #root, #root>div, .Main {
 .order-list-items {
   margin-top: 20px;
 }
-
+h5 {
+  color: white;
+}
 .order-list {
   width: 80%;
   margin: auto;
@@ -36,8 +38,8 @@ html, body, #root, #root>div, .Main {
 }
 
 .order-summary-items {
-  /* align-self: flex-end;
-  right: 0; */
+  align-self: flex-end;
+  right: 0;
  
 }
 
@@ -52,7 +54,9 @@ html, body, #root, #root>div, .Main {
   text-align: center;
   margin-bottom: 20px;
 }
-
+.order-list-summary {
+  text-shadow:gray;
+}
 .order-img-item {
   width: 40px;
   height: 35px;
@@ -79,9 +83,9 @@ html, body, #root, #root>div, .Main {
   
 }
 
-.product-data {
+.product-data, h3, h5{
   font-family: 'Poppins', sans-serif;
-  color: rgb(2, 38, 74);
+  /* font-family: 'Bitter', serif; */
   font-weight: bolder;
   /* height: 262px;
   width: 170px; */
@@ -125,10 +129,10 @@ html, body, #root, #root>div, .Main {
 
 .cart-item-inc-dec {
   font-size: 16px;
-    background-color: black;
-    padding: 0px;
-    height: 25px;
-    width: 36px;
+  background-color: black;
+  padding: 0px;
+  height: 25px;
+  width: 36px;
 }
 
 .cart-clear-checkout {
@@ -168,13 +172,16 @@ html, body, #root, #root>div, .Main {
 
 .footer {
   position: fixed;
-   left:0px;
-   bottom:0px;
-   height: 100px;
-   width:100%;
-  background-color: rgb(6, 99, 253);
+  left:0px;
+  bottom:0px;
+  height: 100px;
+  width:100%;
+  background-color: rgb(12, 102, 246);
   color: white;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  
 }
 
 .footer-tag {
@@ -204,7 +211,7 @@ html, body, #root, #root>div, .Main {
   display: flex;
     text-align: center;
     margin: auto;
-    background-color: ghostwhite;
+    background-color: rgb(248, 248, 255);
     color: black;
 }
 
@@ -214,6 +221,10 @@ html, body, #root, #root>div, .Main {
   color: white;
 }
 
-.home-bg {
-  background-color: whitesmoke;
+#home-bg {
+  background-color: rgb(245, 245, 245);
+}
+
+.order-list-items {
+  color: rgb(10, 9, 9);
 }

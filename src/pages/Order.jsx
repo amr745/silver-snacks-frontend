@@ -29,7 +29,8 @@ const Order = ({ cartItem }) => {
             </div>}
             <div style={{
                 width: "80%",
-                backgroundColor: "white",
+                backgroundColor: "rgb(255, 255, 255, 0.91)",
+                borderRadius: "20px",
                 margin: "auto"
             }} >
                 <div className="order-list-summary">
