@@ -15,10 +15,13 @@ const Home = ({ products }) => {
             <div className="product-data" key={product._id}>
 
               <Card style={{ width: '18rem', margin: 'auto', backgroundColor: "darkslateblue", borderRadius: "8px" }}>
-                <Card.Img className="product-card-img" style={{ height: "286" }} variant="top" src={product.img} />
+                <Link style={{ textDecoration: "none" }} to={`/products/${product._id}`}> <Card.Img className="product-card-img" style={{ height: "286" }} variant="top" src={product.img} /></Link>
+
                 <Card.Body>
                   <Card.Title ><Link style={{ textDecoration: "none" }} to={`/products/${product._id}`}> <h3 className="product-card-name">{product.name}</h3></Link></Card.Title>
-                  <Button className="product-card-price" variant="primary">${product.price}</Button>
+                  <Link style={{ textDecoration: "none" }} to={`/products/${product._id}`}> <Button
+                    className="product-card-price" variant="primary">${product.price}</Button></Link>
+
                 </Card.Body>
               </Card>
             </div>
