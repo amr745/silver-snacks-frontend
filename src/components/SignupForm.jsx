@@ -94,12 +94,12 @@ function SignupForm({ updateMessage, handleSignupOrLogin }) {
                     />
                 </div>
                 <div className="d-grid">
-                    <button type="submit" className="btn btn-primary" disabled={!validForm()}>
+                    <button type="submit" className="btn btn-primary" disabled={validForm()}>
                         Sign Up
                     </button>
                 </div>
                 <p className="forgot-password text-right">
-                    Already registered <a href="/login">Sign in?</a>
+                    Already registered? <a href="/login">Sign in</a>
                 </p>
             </form>
 

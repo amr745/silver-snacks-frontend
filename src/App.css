@@ -135,7 +135,7 @@ h5 {
 #nav-header-name {
   font-family: 'Bitter', serif;
   right: 0;
-  position: absolute;
+  position: center;
 }
 
 .cart-remove-item-button {
@@ -169,6 +169,13 @@ h5 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   
+}
+
+form {
+  display: inline-block;
+  margin-left: 25%;
+  margin-right:25%;
+  width: 50%;
 }
 
 #product-image {
