@@ -8,12 +8,14 @@ const Show = ({ products, handleClick }) => {
 
   return (
     <div className="Show">
-      <h3>{product.name}</h3>
-      <img id="product-image" src={product.img} alt={product.name} />
-      <h4>{product.price}</h4>
-      <h4>{product.quantity}</h4>
-      <h5>{product.description}</h5>
-      <button onClick={() => handleClick(product)}>Buy Now</button>
+      <div className="show-image"><img id="product-image" src={product.img} alt={product.name} /></div>
+      <div className="show-info">
+      <h3 className="show-name">{product.name}</h3>
+      <div className="show-price"><h4>${(product.price).toFixed(2)}</h4></div>
+      <button className="show-button" onClick={() => handleClick(product)}>Buy Now</button>
+      <div className="show-qnt"><h4>Only {product.quantity} items in stock!</h4></div>
+      <h5 className="show-des">{product.description}</h5>
+      </div>
     </div>
   )
 }
