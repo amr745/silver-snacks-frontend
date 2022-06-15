@@ -75,7 +75,6 @@ function App() {
         handleClick={handleClick}
         handleRemove={handleRemove}
         cartItem={cartItem}
-        handleRemove={handleRemove}
         handleClearCart={handleClearCart}
       />
       <Footer />
