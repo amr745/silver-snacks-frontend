@@ -10,7 +10,7 @@ const Home = ({ products }) => {
     return (
 
 
-      <Row xs={2} md={3} lg={3} className="mb-3 mt-3" id="home-bg">
+      <Row xs={2} md={4} lg={4} className="mt-3" id="home-bg">
         {products.map((product) => (
           <Col className="mb-3 mt-3">
             <div className="product-data" key={product._id}>

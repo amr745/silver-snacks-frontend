@@ -29,7 +29,7 @@ const Order = ({ cartItem }) => {
             </div>}
             <div style={{
                 width: "80%",
-                backgroundColor: "rgb(255, 255, 255, 0.91)",
+                backgroundColor: "rgb(255, 255, 255, 0.99)",
                 borderRadius: "20px",
                 margin: "auto"
             }} >
@@ -76,7 +76,7 @@ const Order = ({ cartItem }) => {
                     </div>
                 </div >
             </div>
-            {!isOrderPlaced && <div style={{ marginTop: "10px" }} className="place-order-button">
+            {!isOrderPlaced && <div className="place-order-button">
                 <Button variant="primary" onClick={() => { setIsOrderPlaced(true); }}>Place Order</Button>
 
             </div>}

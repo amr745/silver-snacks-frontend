@@ -28,7 +28,7 @@ function Header({ user, handleLogout }) {
           <Nav.Link as={Link} to="/cart"><AiOutlineShoppingCart /> Cart</Nav.Link>
           <Nav.Link as={Link} to="#" onClick={handleLogout}
           ><FaSignOutAlt /> Logout</Nav.Link>
-          <h5>Welcome {user.name}!</h5>
+          <h5 id="nav-header-name">Welcome {user.name}!</h5>
         </Nav>
       </Container>
     </Navbar>)
