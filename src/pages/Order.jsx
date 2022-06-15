@@ -27,48 +27,50 @@ const Order = ({ cartItem }) => {
                 <h1>Thank You!! </h1>
                 <h3>Your Order has been placed.</h3>
             </div>}
-            <div className="order-list-summary">
-                <div className="order-list">
-                    <h3>Order List</h3>
-                    <div>
-                        <Row>
-                            <Col style={{ fontWeight: 'bolder' }}>Product</Col>
-                            <Col style={{ fontWeight: 'bolder' }}>Qty</Col>
-                            <Col style={{ fontWeight: 'bolder' }}>Price</Col>
-                        </Row>
-
-                    </div>
-                    {cartItem.map((item) => (
-                        <div key={item._id} className="order-list-items">
+            <div >
+                <div className="order-list-summary">
+                    <div className="order-list">
+                        <h3>Order List</h3>
+                        <div>
                             <Row>
-                                <Col style={{
-                                }}>
-                                    <img className="order-img-item" src={item.img} />{`${item.name}`}
-                                </Col>
-                                <Col style={{
-                                }}>
-                                    {item.selectedQty}
-                                </Col>
-                                <Col style={{
-                                }}>
-                                    {item.price}
-                                </Col>
+                                <Col style={{ fontWeight: 'bolder' }}>Product</Col>
+                                <Col style={{ fontWeight: 'bolder' }}>Qty</Col>
+                                <Col style={{ fontWeight: 'bolder' }}>Price</Col>
                             </Row>
 
                         </div>
-                    ))}
-                </div>
-                <div className="order-summary">
-                    <div className="order-summary-items">
-                        <h3>Order Summary</h3>
-                        <div>
-                            <p>Subtotal: {subTotal.toFixed(2)}</p>
-                            <p>Tax: 7% </p>
-                            <p>Total: {total.toFixed(2)}</p>
+                        {cartItem.map((item) => (
+                            <div key={item._id} className="order-list-items">
+                                <Row>
+                                    <Col style={{
+                                    }}>
+                                        <img className="order-img-item" src={item.img} />{`${item.name}`}
+                                    </Col>
+                                    <Col style={{
+                                    }}>
+                                        {item.selectedQty}
+                                    </Col>
+                                    <Col style={{
+                                    }}>
+                                        {item.price}
+                                    </Col>
+                                </Row>
+
+                            </div>
+                        ))}
+                    </div>
+                    <div className="order-summary">
+                        <div className="order-summary-items">
+                            <h3>Order Summary</h3>
+                            <div>
+                                <p>Subtotal: {subTotal.toFixed(2)}</p>
+                                <p>Tax: 7% </p>
+                                <p>Total: {total.toFixed(2)}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div >
+                </div >
+            </div>
             {!isOrderPlaced && <div className="place-order-button">
                 <Button variant="primary" onClick={() => { setIsOrderPlaced(true); }}>Place Order</Button>
 
