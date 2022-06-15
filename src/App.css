@@ -150,13 +150,9 @@
 }
 
 .show-button {
-  background-color: rgb(6, 99, 253);
+  /* background-color: rgb(6, 99, 253);
   border-radius: 20px;
-  color: white;
-}
-
-.show-button:hover {
-  color: orange;
+  color: white; */
 }
 
 .show-qnt{
@@ -169,6 +165,7 @@
 }
 
 .footer {
+  position: fixed;
    left:0px;
    bottom:0px;
    height: 100px;
