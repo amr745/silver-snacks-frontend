@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Poppins:wght@100&display=swap');
 
+html, body, #root, #root>div, .Main {
+  height: 100%
+}
+
 #product-data {
   width: 10rem;
 }
@@ -61,6 +65,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%;
 }
 
 .Home {

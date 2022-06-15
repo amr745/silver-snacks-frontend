@@ -75,7 +75,7 @@ const Order = ({ cartItem }) => {
                     </div>
                 </div >
             </div>
-            {!isOrderPlaced && <div className="place-order-button">
+            {!isOrderPlaced && <div style={{ marginTop: "10px" }} className="place-order-button">
                 <Button variant="primary" onClick={() => { setIsOrderPlaced(true); }}>Place Order</Button>
 
             </div>}
