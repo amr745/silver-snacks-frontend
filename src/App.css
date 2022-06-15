@@ -135,3 +135,36 @@
   font-weight: bolder;
 }
 
+.Show {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
+
+#product-image {
+  width: 400px;
+}
+
+.show-name {
+  font-weight: bold;
+  margin-bottom: 20pt;
+}
+
+.show-button {
+  background-color: rgb(6, 99, 253);
+  border-radius: 20px;
+  color: white;
+}
+
+.show-button:hover {
+  color: orange;
+}
+
+.show-qnt{
+  color: red;
+  margin-top: 20pt;
+}
+
+.show-des {
+  margin-top: 20pt;
+}
+
