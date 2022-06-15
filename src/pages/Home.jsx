@@ -14,7 +14,7 @@ const Home = ({ products }) => {
           <Col className="mb-3 mt-3">
             <div className="product-data" key={product._id}>
 
-              <Card style={{ width: '18rem', margin: 'auto', backgroundColor: "rgb(80 80 85)", borderRadius: "8px", boxShadow: "10px 10px 5px"}}>
+              <Card style={{ width: '18rem', margin: 'auto', backgroundColor: "rgb(80 80 85)", borderRadius: "8px" }}>
                 <Link style={{ textDecoration: "none" }} to={`/products/${product._id}`}> <Card.Img className="product-card-img" style={{ height: "286" }} variant="top" src={product.img} /></Link>
 
                 <Card.Body>
