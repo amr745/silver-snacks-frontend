@@ -27,7 +27,11 @@ const Order = ({ cartItem }) => {
                 <h1>Thank You!! </h1>
                 <h3>Your Order has been placed.</h3>
             </div>}
-            <div >
+            <div style={{
+                width: "80%",
+                backgroundColor: "white",
+                margin: "auto"
+            }} >
                 <div className="order-list-summary">
                     <div className="order-list">
                         <h3>Order List</h3>
