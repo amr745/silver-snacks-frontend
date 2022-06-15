@@ -18,6 +18,9 @@ Silver Snacks Emporium is a full CRUD eCommerce application that stores and hand
 
 ![Login Page](https://imgur.com/hqyGIUN.png)
 
+![Login Page](https://imgur.com/fMZXCSF.png)
+
+
 ---
 
 ## User Stories
