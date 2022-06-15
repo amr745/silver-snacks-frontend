@@ -12,7 +12,7 @@ const loaded = () => {
        <Link to={`/products/${product._id}`}>
          <img id="product-data" src={product.img} alt={product.name} />
        </Link>
-        <h2>${product.price}</h2>
+        <h2>${product.price.toFixed(2)}</h2>
      </div>
    ))}
     </div>
