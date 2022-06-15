@@ -77,6 +77,8 @@
   font-family: 'Poppins', sans-serif;
   color: rgb(2, 38, 74);
   font-weight: bolder;
+  /* height: 262px;
+  width: 170px; */
 }
 
 .cart {
@@ -194,3 +196,18 @@
   grid-column-gap: 0rem;
 }
 
+.product-card-img {
+  height: 260px;
+  width: 260px;
+}
+
+.product-card-price {
+  display: flex;
+    text-align: center;
+    margin: auto;
+}
+
+.product-card-name {
+  text-align: center;
+  font-size: 18px;
+}
