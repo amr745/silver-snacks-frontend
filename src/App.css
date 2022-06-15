@@ -135,7 +135,7 @@ h5 {
 #nav-header-name {
   font-family: 'Bitter', serif;
   right: 0;
-  position: absolute;
+  position: center;
 }
 
 .cart-remove-item-button {
