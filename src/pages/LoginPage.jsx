@@ -64,7 +64,7 @@ function LoginPage({ handleSignupOrLogin, updateMessage }) {
                     </button>
                 </div>
                 <p className="forgot-password text-right">
-                    Register? <a href="/signup">Sign-up</a>
+                    Not a member? <a href="/signup">Sign-up now!</a>
                 </p>
             </form>
 

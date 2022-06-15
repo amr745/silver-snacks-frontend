@@ -99,7 +99,7 @@ function SignupForm({ updateMessage, handleSignupOrLogin }) {
                     </button>
                 </div>
                 <p className="forgot-password text-right">
-                    Already registered <a href="/login">Sign in?</a>
+                    Already registered? <a href="/login">Sign in</a>
                 </p>
             </form>
 

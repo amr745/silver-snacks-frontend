@@ -57,7 +57,7 @@ const Order = ({ cartItem }) => {
                                     </Col>
                                     <Col style={{
                                     }}>
-                                        {item.price}
+                                        ${item.price.toFixed(2)}
                                     </Col>
                                 </Row>
 
@@ -68,9 +68,9 @@ const Order = ({ cartItem }) => {
                         <div className="order-summary-items">
                             <h3>Order Summary</h3>
                             <div>
-                                <p>Subtotal: {subTotal.toFixed(2)}</p>
+                                <p>Subtotal: ${subTotal.toFixed(2)}</p>
                                 <p>Tax: 7% </p>
-                                <p>Total: {total.toFixed(2)}</p>
+                                <p>Total: ${total.toFixed(2)}</p>
                             </div>
                         </div>
                     </div>
