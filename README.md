@@ -1,6 +1,6 @@
 # Silver Snacks Emporium
 
-Silver Snacks Emporium is a full CRUD eCommerce application that stores and handles products, purchases, and user authentication information using MongoDB.
+Silver Snacks Emporium is a full CRUD eCommerce application that stores and handles products, purchases, and user authentication information using React and MongoDB.
 
 ---
 
@@ -22,16 +22,17 @@ Silver Snacks Emporium is a full CRUD eCommerce application that stores and hand
 
 ## User Stories
 
-As a user, I want to be able to see products displayed on a main page.
-As a user, I want to be able to sign up for an account.
-As a user, I want to be able to sign in and out of my account. 
-As a user, I want to be able to click on an item and view information about that item.
-As a user, I want to be able to click a buy now button and have items added to my cart. 
-As a user, I want to be able to view items saved in my cart.
-As a user, I want to be able to increase or decrease the amount of items in my cart.
-As a user, I want to be able to remove items from my cart.
-As a user, I want to be able to check out my order and get a calculated total. 
-As a user, I want to be able to see my order summary after my order is placed.
+### As a user, I want to:
+* see products displayed on a main page.
+* sign up for an account.
+* sign in and out of my account. 
+* click on an item and view information about that item.
+* click a buy now button and have items added to my cart. 
+* view items saved in my cart.
+* increase or decrease the amount of items in my cart.
+* remove items from my cart.
+* check out my order and get a calculated total. 
+* see my order summary after my order is placed.
 
 ---
 
@@ -50,7 +51,7 @@ Heroku
 
 ### Frontend
 
-React.js
+ReactJS
 JaveScript
 HTML5
 React Icons
@@ -69,10 +70,10 @@ Netlify
 
 [Click Here](https://silver-snacks-emporium.herokuapp.com/products) to see deployed Heroku app.
 
-[Click Here]() to see deployed Netlify app.
+[Click Here](https://magical-valkyrie-0976d2.netlify.app/) to see deployed Netlify app.
 
 ---
 
 ## Future Enhancements
 
-Add authorization. 
+Add authorization, delivery address, payment option, and categories.
