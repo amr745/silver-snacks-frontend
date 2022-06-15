@@ -25,7 +25,7 @@ html, body, #root, #root>div, .Main {
   margin-top: 20px;
 }
 h5 {
-  color: white;
+  color:white;
 }
 .order-list {
   width: 80%;
@@ -109,7 +109,7 @@ h5 {
   border: 1px solid black;
   width: 80%;
   margin: auto;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .cart-product-img {
@@ -135,7 +135,9 @@ h5 {
 #nav-header-name {
   font-family: 'Bitter', serif;
   right: 0;
-  position: center;
+  position: absolute;
+  padding-right: 10px;
+  font-style: italic;
 }
 
 .cart-remove-item-button {
@@ -205,14 +207,16 @@ form {
   background-color: rgb(12, 102, 246);
   color: white;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Bitter', serif;
   font-weight: bolder;
-  
+  font-style: italic;
+  font-size: 12px;
 }
 
 .footer-tag {
   font-weight: bold;
   margin: 0pt;
+  margin-top: 10px;
 }
 
 .footer-rights {
@@ -224,6 +228,10 @@ form {
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0pt;
   grid-column-gap: 0rem;
+}
+
+img {
+  border-radius: 10px;
 }
 
 .product-card-img {
