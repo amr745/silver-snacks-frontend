@@ -94,7 +94,7 @@ function SignupForm({ updateMessage, handleSignupOrLogin }) {
                     />
                 </div>
                 <div className="d-grid">
-                    <button type="submit" className="btn btn-primary" disabled={!validForm()}>
+                    <button type="submit" className="btn btn-primary" disabled={validForm()}>
                         Sign Up
                     </button>
                 </div>
