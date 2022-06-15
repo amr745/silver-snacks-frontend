@@ -56,11 +56,13 @@
 
 .order {
   font-family: 'Bitter', serif;
-  /* background: url(https://images.pexels.com/photos/5632371/pexels-photo-5632371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) no-repeat center center fixed; 
+  /* background: url(https://blog.dieutek.com/wp-content/uploads/2020/09/eCommerce-website-search-customer-experience.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; */
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: white;
 }
 
 .Home {
@@ -71,6 +73,7 @@
   grid-template-columns:repeat(3 ,1fr);
   grid-template-columns:30% repeat(2,1fr);
   padding: 5rem;
+  
 }
 
 .product-data {
@@ -199,15 +202,24 @@
 .product-card-img {
   height: 260px;
   width: 260px;
+  margin-left: 12px;
+  margin-top: 20px;
 }
 
 .product-card-price {
   display: flex;
     text-align: center;
     margin: auto;
+    background-color: ghostwhite;
+    color: black;
 }
 
 .product-card-name {
   text-align: center;
   font-size: 18px;
+  color: white;
+}
+
+.home-bg {
+  background-color: whitesmoke;
 }

@@ -9,12 +9,12 @@ const Home = ({ products }) => {
     return (
 
 
-      <Row xs={2} md={3} lg={3} className="mb-3 mt-3">
+      <Row xs={2} md={3} lg={3} className="mb-3 mt-3" className="home-bg">
         {products.map((product) => (
           <Col className="mb-3 mt-3">
             <div className="product-data" key={product._id}>
 
-              <Card style={{ width: '18rem', margin: 'auto' }}>
+              <Card style={{ width: '18rem', margin: 'auto', backgroundColor: "darkslateblue", borderRadius: "8px" }}>
                 <Card.Img className="product-card-img" style={{ height: "286" }} variant="top" src={product.img} />
                 <Card.Body>
                   <Card.Title ><Link style={{ textDecoration: "none" }} to={`/products/${product._id}`}> <h3 className="product-card-name">{product.name}</h3></Link></Card.Title>
