@@ -154,16 +154,6 @@
   margin-bottom: 20pt;
 }
 
-.show-button {
-  background-color: rgb(6, 99, 253);
-  border-radius: 20px;
-  color: white;
-}
-
-.show-button:hover {
-  color: orange;
-}
-
 .show-qnt{
   color: red;
   margin-top: 20pt;
@@ -174,6 +164,7 @@
 }
 
 .footer {
+  position: fixed;
    left:0px;
    bottom:0px;
    height: 100px;
