@@ -64,10 +64,18 @@ Netlify
 
 ---
 
-
 ## Getting Started
 
-[Click Here](https://www.linkedin.com/in/madhumida-sanjeeviraj/) to view my Linkedin profile.
+[Click Here](https://github.com/Vanillajaviscript/project-3--backend) to see Backend Repo.
 
+[Click Here](https://trello.com/b/4UDGr6bi/project-3) to view Trello Board.
+
+[Click Here](https://silver-snacks-emporium.herokuapp.com/products) to see deployed Heroku app.
+
+[Click Here](https://magical-valkyrie-0976d2.netlify.app/) to see deployed Netlify app.
 
 ---
+
+## Future Enhancements
+
+Add authorization, delivery address, payment option, and categories.
