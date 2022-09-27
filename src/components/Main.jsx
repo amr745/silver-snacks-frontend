@@ -13,7 +13,7 @@ import Order from "../pages/Order";
 const Main = (props) => {
 
   const [products, setProducts] = useState(null);
-  const url = "https://silver-snacks-emporium.herokuapp.com/products/";
+  const url = "https://silver-snacks-backend.vercel.app/products/";
 
   const getProducts = async () => {
     const res = await fetch(url);

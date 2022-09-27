@@ -1,6 +1,6 @@
 const config = {
     PROD: {
-        URL: "https://silver-snacks-emporium.herokuapp.com",
+        URL: "https://silver-snacks-backend.vercel.app/",
     },
     DEV: {
         URL: "http://localhost:4000"
