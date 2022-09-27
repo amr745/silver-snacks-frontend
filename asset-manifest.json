@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/silver-snacks-frontend/static/css/main.38b55b38.css",
+    "main.js": "/silver-snacks-frontend/static/js/main.32814626.js",
+    "index.html": "/silver-snacks-frontend/index.html",
+    "main.38b55b38.css.map": "/silver-snacks-frontend/static/css/main.38b55b38.css.map",
+    "main.32814626.js.map": "/silver-snacks-frontend/static/js/main.32814626.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38b55b38.css",
+    "static/js/main.32814626.js"
+  ]
+}
