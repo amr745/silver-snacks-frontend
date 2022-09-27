@@ -70,7 +70,7 @@ Netlify
 
 [Click Here](https://trello.com/b/4UDGr6bi/project-3) to view Trello Board.
 
-[Click Here](https://silver-snacks-backend.vercel.app/products/) to see deployed backend app with Vercel.
+[Click Here](https://silver-snacks-backend.vercel.app/products) to see deployed backend app with Vercel.
 
 [Click Here](https://magical-valkyrie-0976d2.netlify.app/) to see deployed Netlify app.
 
