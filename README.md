@@ -66,13 +66,13 @@ Netlify
 
 ## Getting Started
 
-[Click Here](https://github.com/Vanillajaviscript/project-3--backend) to see Backend Repo.
+[Click Here](https://github.com/amr745/silver-snacks-backend) to see Backend Repo.
 
 [Click Here](https://trello.com/b/4UDGr6bi/project-3) to view Trello Board.
 
 [Click Here](https://silver-snacks-backend.vercel.app/products) to see deployed backend app with Vercel.
 
-[Click Here](https://magical-valkyrie-0976d2.netlify.app/) to see deployed Netlify app.
+[Click Here](https://amr745.github.io/silver-snacks-frontend) to see deployed Github Pages app.
 
 ---
 
